@@ -8,6 +8,7 @@
 #include <type_traits>
 #include <concepts>
 
+
 template<typename T>
 concept fundamental = std::is_fundamental<T>::value;
 
@@ -16,6 +17,13 @@ concept object = std::is_class<T>::value;
 
 template<typename T>
 concept raw_pointer = std::is_pointer<T>::value;
+
+template<typename T>
+concept iterable = (object<T> && requires(T iter)
+{
+    iter.begin();
+    iter.end();
+});
 
 
 #endif //PRETTYPRINT_CONCEPTS_H

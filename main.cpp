@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <vector>
 
 #include "prettifier.h"
 #include "name.h"
@@ -22,5 +23,16 @@ int main()
     std::shared_ptr<pp::person> someone_ptr = std::make_shared<pp::person>(someone);
     std::cout << prettify("me ptr", someone_ptr.get());
 
+    std::vector<pp::person> people {
+        someone,
+        someone,
+        someone,
+    };
+
+    std::cout << prettify("people", people);
+
+    std::vector<int> nums{1, 2, 3, 4, 5};
+
+    std::cout << prettify("nums", nums) << std::endl;
     return 0;
 }

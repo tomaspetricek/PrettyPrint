@@ -28,7 +28,7 @@ class prettifier {
     std::string indent_;
     std::string attr_div_;
     std::stringstream buff_;
-    const static char attr_sep_{'\n'};
+    const static char end_{'\n'};
     int depth_{0};
 
 public:
@@ -42,31 +42,52 @@ public:
         return *this;
     }
 
-    void add_attr(const std::string& name, const fundamental auto& val)
+    void add_name(const std::string& name)
     {
-        buff_ << indent_*depth_ << name << attr_div_ << val << attr_sep_;
+        buff_ << indent_*depth_ << name;
     }
 
-    void add_attr(const std::string& name, const std::string& str)
+    template<typename value>
+    void add_attr(const std::string& name, const value& val)
     {
-        buff_ << indent_*depth_ << name << attr_div_ << str << attr_sep_;
+        if (!name.empty())
+            add_name(name);
+
+        add_val(val);
     }
 
-    void add_attr(const std::string& name, const object auto& obj)
+    void add_val(const fundamental auto& val)
     {
-        buff_ << indent_*depth_;
+        buff_ << attr_div_ << val << end_;
+    }
+
+    void add_val(const std::string& str)
+    {
+        buff_ << attr_div_ << str << end_;
+    }
+
+    void add_val(const iterable auto& it)
+    {
+        for (const auto& el : it) {
+            add_val(el);
+        }
+    }
+
+    void add_val(const object auto& obj)
+    {
+        buff_ << end_;
         depth_++;
-        buff_ << name << attr_sep_;
         obj.prettify(*this);
         depth_--;
     }
 
-    void add_attr(const std::string& name, const raw_pointer auto& ptr)
+    void add_val(const raw_pointer auto& ptr)
     {
-        add_attr(name, *ptr);
+        add_val(*ptr);
     }
 
-    std::string string() {
+    std::string string()
+    {
         return buff_.str();
     }
 
