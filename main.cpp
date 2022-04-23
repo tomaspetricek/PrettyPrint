@@ -7,7 +7,7 @@
 
 int main()
 {
-    prettifier prettify{' '};
+    prettifier prettify{' ', ": "};
 
     pp::person me{pp::name{"Tomas", "Petricek"}, 23};
     std::cout << prettify("me", me) << std::endl;
