@@ -7,6 +7,7 @@
 
 #include <type_traits>
 #include <concepts>
+#include <string>
 
 
 template<typename T>
@@ -19,10 +20,10 @@ template<typename T>
 concept raw_pointer = std::is_pointer<T>::value;
 
 template<typename T>
-concept iterable = (object<T> && requires(T iter)
+concept iterable = (object<T> && requires(T it)
 {
-    iter.begin();
-    iter.end();
+    it.begin();
+    it.end();
 });
 
 

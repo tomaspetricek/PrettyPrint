@@ -50,20 +50,27 @@ public:
     template<typename value>
     void add_attr(const std::string& name, const value& val)
     {
-        if (!name.empty())
-            add_name(name);
+        add_name(name);
+
+        if (!(std::is_pointer<value>::value || std::is_class<value>::value)
+                || std::is_same<value, std::string>::value) {
+            buff_ << attr_div_;
+        }
+        else {
+            buff_ << end_;
+        }
 
         add_val(val);
     }
 
     void add_val(const fundamental auto& val)
     {
-        buff_ << attr_div_ << val << end_;
+        buff_ << val << end_;
     }
 
     void add_val(const std::string& str)
     {
-        buff_ << attr_div_ << str << end_;
+        buff_ << str << end_;
     }
 
     void add_val(const iterable auto& it)
@@ -75,7 +82,6 @@ public:
 
     void add_val(const object auto& obj)
     {
-        buff_ << end_;
         depth_++;
         obj.prettify(*this);
         depth_--;
