@@ -22,10 +22,10 @@ public:
     explicit prettifier(char indent)
             :indent_(indent) { }
 
-    template<class Prettifiable>
-    prettifier& operator()(const Prettifiable& obj)
+    template<class prettifiable>
+    prettifier& operator()(const std::string name, const prettifiable& obj)
     {
-        obj.prettify(*this);
+        add_attr(name, obj);
         return *this;
     }
 
@@ -36,7 +36,7 @@ public:
 
     void add_attr(const std::string& name, const object auto& obj)
     {
-        buff_ << name << ": " << obj.pretify << obj_sep;
+        buff_ << name << ": " << obj.pretify(*this) << obj_sep;
     }
 
     friend std::ostream& operator<<(std::ostream& os, prettifier& pret)

@@ -6,33 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/concepts.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/concepts.h
 type_traits
 -
 concepts
 -
 
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/main.cpp
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/main.cpp
 iostream
 -
+vector
+-
 prettifier.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 name.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/name.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h
 person.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/person.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/person.h
 
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/name.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h
 prettifier.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/person.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/person.h
 utility
 -
 prettifier.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 string
 -
 sstream
@@ -40,5 +42,5 @@ sstream
 ostream
 -
 concepts.h
-/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/concepts.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/concepts.h
 

@@ -15,9 +15,8 @@ concept fundamental = std::is_fundamental<T>::value;
 template <class T>
 concept object = std::is_class<T>::value;
 
-//template<typename T>
-//concept iterable = std::ranges::range<T>;
-
+template<typename T>
+concept iterable = std::ranges::range<T>;
 
 
 #endif //PRETTYPRINT_CONCEPTS_H

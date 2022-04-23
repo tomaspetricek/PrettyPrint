@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/main.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/CMakeFiles/PrettyPrint.dir/main.cpp.o"
+  "/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/main.cpp" "/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/CMakeFiles/PrettyPrint.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

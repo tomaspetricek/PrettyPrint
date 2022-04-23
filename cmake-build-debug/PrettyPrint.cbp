@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug"/>
+				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug"/>
+				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug"/>
+				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PrettyPrint">
-				<Option output="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/PrettyPrint" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug"/>
+				<Option output="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/PrettyPrint" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 PrettyPrint"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 PrettyPrint"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="PrettyPrint/fast">
-				<Option output="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/PrettyPrint" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug"/>
+				<Option output="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/PrettyPrint" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,17 +73,17 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 PrettyPrint/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 PrettyPrint/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/main.cpp">
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/main.cpp">
 			<Option target="PrettyPrint"/>
 		</Unit>
-		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/CMakeLists.txt">
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
