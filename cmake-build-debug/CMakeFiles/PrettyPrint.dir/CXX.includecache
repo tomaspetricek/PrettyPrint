@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/concepts.h
+type_traits
+-
+concepts
+-
+
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/main.cpp
+iostream
+-
+prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+name.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/name.h
+person.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/person.h
+
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/name.h
+prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/person.h
+utility
+-
+prettifier.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/prettifier.h
+string
+-
+sstream
+-
+ostream
+-
+concepts.h
+/Users/tomaspetricek/Programming/Languages/Cpp/PrettyPrint/concepts.h
+
