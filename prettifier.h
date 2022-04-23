@@ -66,17 +66,6 @@ public:
         add_attr(name, *ptr);
     }
 
-//    void add_attr(const std::string& name, const iterable auto& it) {
-//        buff_ << indent_*depth_;
-//        depth_++;
-//        buff_ << name << attr_sep_;
-//
-//        for (const auto& el : it)
-//            add_attr("", el);
-//
-//        depth_--;
-//    }
-
     std::string string() {
         return buff_.str();
     }
