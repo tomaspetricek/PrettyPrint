@@ -3,4 +3,4 @@ project(PrettyPrint)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(PrettyPrint main.cpp)
+add_executable(PrettyPrint main.cpp concepts.h prettifier.h person.h name.h)

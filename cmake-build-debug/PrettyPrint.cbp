@@ -80,7 +80,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/concepts.h">
+			<Option target="PrettyPrint"/>
+		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/main.cpp">
+			<Option target="PrettyPrint"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h">
+			<Option target="PrettyPrint"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/person.h">
+			<Option target="PrettyPrint"/>
+		</Unit>
+		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h">
 			<Option target="PrettyPrint"/>
 		</Unit>
 		<Unit filename="/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/CMakeLists.txt">

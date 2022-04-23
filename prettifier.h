@@ -8,24 +8,35 @@
 #include <string>
 #include <sstream>
 #include <ostream>
+#include <iostream>
 #include <utility>
+
 #include "concepts.h"
 
+std::string operator*(const std::string& base, std::size_t times)
+{
+    std::string res;
+
+    for (std::size_t i{0}; i<times; i++) {
+        res += base;
+    }
+
+    return res;
+}
 
 class prettifier {
-    char indent_;
+    std::string indent_;
     std::string attr_div_;
     std::stringstream buff_;
+    const static char attr_sep_{'\n'};
+    int depth_{0};
 
 public:
-    const static char attr_sep{';'};
-    const static char obj_sep{'#'};
+    explicit prettifier(std::string indent, std::string attr_div)
+            :indent_(std::move(indent)), attr_div_(std::move(attr_div)) { }
 
-    explicit prettifier(char indent, std::string attr_div)
-            :indent_(indent), attr_div_(std::move(attr_div)){ }
-
-    template<class prettifiable>
-    prettifier& operator()(const std::string name, const prettifiable& obj)
+    template<typename prettifiable>
+    prettifier& operator()(const std::string& name, const prettifiable& obj)
     {
         add_attr(name, obj);
         return *this;
@@ -33,23 +44,42 @@ public:
 
     void add_attr(const std::string& name, const fundamental auto& val)
     {
-        buff_ << name << attr_div_ << val << attr_sep;
+        buff_ << indent_*depth_ << name << attr_div_ << val << attr_sep_;
+    }
+
+    void add_attr(const std::string& name, const std::string& str)
+    {
+        buff_ << indent_*depth_ << name << attr_div_ << str << attr_sep_;
     }
 
     void add_attr(const std::string& name, const object auto& obj)
     {
-        buff_ << name << ": " << obj.pretify(*this) << obj_sep;
+        buff_ << indent_*depth_;
+        depth_++;
+        buff_ << name << attr_sep_;
+        obj.prettify(*this);
+        depth_--;
     }
+
+    void add_attr(const std::string& name, const raw_pointer auto& ptr)
+    {
+        add_attr(name, *ptr);
+    }
+
+//    void add_attr(const std::string& name, const iterable auto& it) {
+//        buff_ << indent_*depth_;
+//        depth_++;
+//        buff_ << name << attr_sep_;
+//
+//        for (const auto& el : it)
+//            add_attr("", el);
+//
+//        depth_--;
+//    }
 
     friend std::ostream& operator<<(std::ostream& os, prettifier& pret)
     {
-        std::string line;
-
-        while (std::getline(pret.buff_, line, prettifier::attr_sep)) {
-            os << line << "\n";
-        }
-
-        return os;
+        return os << pret.buff_.rdbuf();
     }
 };
 

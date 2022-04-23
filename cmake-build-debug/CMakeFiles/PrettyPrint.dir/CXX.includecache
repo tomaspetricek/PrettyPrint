@@ -17,6 +17,8 @@ iostream
 -
 vector
 -
+memory
+-
 prettifier.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 name.h
@@ -33,6 +35,8 @@ utility
 -
 prettifier.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
+name.h
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 string
@@ -40,6 +44,8 @@ string
 sstream
 -
 ostream
+-
+iostream
 -
 utility
 -

@@ -7,16 +7,31 @@
 
 #include <type_traits>
 #include <concepts>
-//#include <ranges>
+
 
 template<typename T>
 concept fundamental = std::is_fundamental<T>::value;
 
-template <class T>
+//template<typename T>
+//concept basic = (fundamental<T> || std::is_same<T, const std::string&>::value);
+
+template<class T>
 concept object = std::is_class<T>::value;
 
 template<typename T>
-concept iterable = std::ranges::range<T>;
+concept raw_pointer = std::is_pointer<T>::value;
+
+//template<typename T>
+//concept iterable = requires(T it)
+//{
+//    it.begin();
+//    it.end();
+//};
+
+//template<typename T>
+//concept prettifiable = requires(const T t, prettifier& pret) {
+//    t.prettify(pret);
+//};
 
 
 #endif //PRETTYPRINT_CONCEPTS_H

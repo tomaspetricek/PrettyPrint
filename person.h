@@ -8,16 +8,16 @@
 #include <utility>
 
 #include "prettifier.h"
+#include "name.h"
 
 namespace pp {
     class person {
-        pp::name name_;
+        name name_;
         int age_;
 
     public:
         person(pp::name name, int age)
                 :name_(std::move(name)), age_(age) { }
-    private:
 
         void prettify(prettifier& pret) const
         {
