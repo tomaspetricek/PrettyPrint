@@ -26,13 +26,18 @@ int main()
     std::vector<pp::person> people {
         someone,
         someone,
-        someone,
     };
 
     std::cout << prettify("people", people);
 
     std::vector<int> nums{1, 2, 3, 4, 5};
+    std::cout << prettify("nums", nums);
 
-    std::cout << prettify("nums", nums) << std::endl;
+    std::vector<std::vector<int>> mat{
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    std::cout << prettify("mat", mat);
     return 0;
 }

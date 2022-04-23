@@ -51,33 +51,47 @@ public:
     void add_attr(const std::string& name, const value& val)
     {
         add_name(name);
-
-        if (!(std::is_pointer<value>::value || std::is_class<value>::value)
-                || std::is_same<value, std::string>::value) {
-            buff_ << attr_div_;
-        }
-        else {
-            buff_ << end_;
-        }
-
+        buff_ << attr_div_;
         add_val(val);
+        buff_ << end_;
+    }
+
+    void add_attr(const std::string& name, const std::string& str) {
+        add_name(name);
+        buff_ << attr_div_;
+        add_val(str);
+        buff_ << end_;
+    }
+
+    void add_attr(const std::string& name, const raw_pointer auto& ptr) {
+        add_name(name);
+        buff_ << end_;
+        add_val(*ptr);
+    }
+
+    void add_attr(const std::string& name, const object auto& obj) {
+        add_name(name);
+        buff_ << end_;
+        add_val(obj);
     }
 
     void add_val(const fundamental auto& val)
     {
-        buff_ << val << end_;
+        buff_ << val;
     }
 
     void add_val(const std::string& str)
     {
-        buff_ << str << end_;
+        buff_ << str;
     }
 
     void add_val(const iterable auto& it)
     {
         for (const auto& el : it) {
             add_val(el);
+            buff_ << ",";
         }
+        buff_ << end_;
     }
 
     void add_val(const object auto& obj)
