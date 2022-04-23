@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/color.hpp
+map
+-
+string
+-
+
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/concepts.h
 type_traits
 -
@@ -15,8 +21,6 @@ concepts
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/main.cpp
 iostream
 -
-vector
--
 memory
 -
 prettifier.h
@@ -25,6 +29,8 @@ name.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h
 person.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/person.h
+color.hpp
+/Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/color.hpp
 
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/name.h
 prettifier.h

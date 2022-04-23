@@ -4,6 +4,7 @@
 #include "prettifier.h"
 #include "name.h"
 #include "person.h"
+#include "color.hpp"
 
 // Build docker image: sudo docker build . -t test:1
 // Run docker image: docker run --rm -it test:1
@@ -14,7 +15,7 @@ int main()
     std::cout << "Pretty Printing" << std::endl;
 
     pp::person someone{pp::name{"Tomas", "Petricek"}, 23};
-    std::cout << prettify("me", someone);
+    std::cout << color::rize(prettify("me", someone).string(), "Yellow", "Dark Gray", "Default");
 
     std::cout << prettify("temp", 70);
 

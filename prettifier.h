@@ -77,6 +77,10 @@ public:
 //        depth_--;
 //    }
 
+    std::string string() {
+        return buff_.str();
+    }
+
     friend std::ostream& operator<<(std::ostream& os, prettifier& pret)
     {
         return os << pret.buff_.rdbuf();
