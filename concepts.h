@@ -27,6 +27,12 @@ concept iterable = (object<T> && requires(T it)
 });
 
 template<typename T>
+concept fundamental_iterable = iterable<T> && fundamental<typename T::value_type>;
+
+template<typename T>
+concept object_iterable = iterable<T> && object<typename T::value_type>;
+
+template<typename T>
 concept nested_iterable = iterable<T> && iterable<typename T::value_type>;
 
 #endif //PRETTYPRINT_CONCEPTS_H

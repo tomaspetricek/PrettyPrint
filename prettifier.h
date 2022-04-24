@@ -29,6 +29,7 @@ class prettifier {
     std::string attr_div_;
     std::stringstream buff_;
     const static char end_{'\n'};
+    const std::string iter_sep_{","};
     int depth_{0};
 
 public:
@@ -88,18 +89,35 @@ public:
         buff_ << str;
     }
 
-    void add_val(const iterable auto& it)
+    void add_val(const fundamental_iterable auto& it)
     {
         depth_++;
         buff_ << indent_*depth_;
 
-        for (const auto& el : it) {
-            add_val(el);
-            buff_ << ", ";
+        for (auto el = it.begin(); el!=it.end(); ++el) {
+            add_val(*el);
+
+            if (el+1!=it.end())
+                buff_ << iter_sep_;
         }
 
         buff_ << end_;
         depth_--;
+    }
+
+    void add_val(const object_iterable auto& it)
+    {
+        buff_ << indent_*depth_;
+
+        for (auto el = it.begin(); el!=it.end(); ++el) {
+            add_val(*el);
+            buff_.seekp(-1, std::ios_base::end);
+
+            if (el+1!=it.end())
+                buff_ << iter_sep_;
+
+            buff_ << end_;
+        }
     }
 
     void add_val(const nested_iterable auto& it)
@@ -123,7 +141,7 @@ public:
 
     std::string string()
     {
-        return buff_.str();
+        return buff_.rdbuf()->str();
     }
 
     friend std::ostream& operator<<(std::ostream& os, prettifier& pret)
