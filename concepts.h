@@ -26,5 +26,7 @@ concept iterable = (object<T> && requires(T it)
     it.end();
 });
 
+template<typename T>
+concept nested_iterable = iterable<T> && iterable<typename T::value_type>;
 
 #endif //PRETTYPRINT_CONCEPTS_H

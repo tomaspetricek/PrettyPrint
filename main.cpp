@@ -1,11 +1,28 @@
 #include <iostream>
 #include <memory>
+#include <utility>
 #include <vector>
 
 #include "prettifier.h"
 #include "name.h"
 #include "person.h"
 #include "color.hpp"
+
+class package {
+    std::string name_;
+    std::vector<std::vector<std::vector<float>>> tensor_;
+    pp::person someone_;
+
+public:
+    package(std::string  name, std::vector<std::vector<std::vector<float>>>  tensor, pp::person  someone)
+            :name_(std::move(name)), tensor_(std::move(tensor)), someone_(std::move(someone)) { }
+
+    void prettify(prettifier& pret) const {
+        pret.add_attr("title", name_);
+        pret.add_attr("tensor", tensor_);
+        pret.add_attr("someone", someone_);
+    }
+};
 
 // Build docker image: sudo docker build . -t test:1
 // Run docker image: docker run --rm -it test:1
@@ -27,17 +44,27 @@ int main()
         someone,
         someone,
     };
-
     std::cout << prettify("people", people);
 
     std::vector<int> nums{1, 2, 3, 4, 5};
     std::cout << prettify("nums", nums);
 
-    std::vector<std::vector<int>> mat{
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
+    std::vector<std::vector<float>> mat{
+        {1.2, 2.5, 3.4},
+        {4.1, 5.3, 6.9},
+        {7.8, 8.1, 9.7}
     };
     std::cout << prettify("mat", mat);
+
+    std::vector<std::vector<std::vector<float>>> tensor {
+        mat,
+        mat,
+        mat,
+    };
+    std::cout << prettify("tensor", tensor);
+
+    package pack{"christmas", tensor, someone};
+    std::cout << prettify("pack", pack);
+
     return 0;
 }

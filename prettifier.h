@@ -56,20 +56,23 @@ public:
         buff_ << end_;
     }
 
-    void add_attr(const std::string& name, const std::string& str) {
+    void add_attr(const std::string& name, const std::string& str)
+    {
         add_name(name);
         buff_ << attr_div_;
         add_val(str);
         buff_ << end_;
     }
 
-    void add_attr(const std::string& name, const raw_pointer auto& ptr) {
+    void add_attr(const std::string& name, const raw_pointer auto& ptr)
+    {
         add_name(name);
         buff_ << end_;
         add_val(*ptr);
     }
 
-    void add_attr(const std::string& name, const object auto& obj) {
+    void add_attr(const std::string& name, const object auto& obj)
+    {
         add_name(name);
         buff_ << end_;
         add_val(obj);
@@ -87,11 +90,23 @@ public:
 
     void add_val(const iterable auto& it)
     {
+        depth_++;
+        buff_ << indent_*depth_;
+
         for (const auto& el : it) {
             add_val(el);
-            buff_ << ",";
+            buff_ << ", ";
         }
+
         buff_ << end_;
+        depth_--;
+    }
+
+    void add_val(const nested_iterable auto& it)
+    {
+        for (const auto& el : it) {
+            add_val(el);
+        }
     }
 
     void add_val(const object auto& obj)
