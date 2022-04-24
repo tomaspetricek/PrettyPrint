@@ -98,7 +98,7 @@ public:
             add_val(*el);
 
             if (el+1!=it.end())
-                buff_ << iter_sep_;
+                buff_ << iter_sep_ << ' ';
         }
 
         buff_ << end_;

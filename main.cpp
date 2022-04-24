@@ -33,38 +33,38 @@ int main()
     std::cout << "Pretty Printing" << std::endl;
 
     pp::person someone{pp::name{"Tomas", "Petricek"}, 23};
-    std::cout << prettify("me", someone);
+    std::cout << prettify("me", someone) << std::endl;
 
-    std::cout << prettify("temp", 70);
+    std::cout << prettify("temp", 70) << std::endl;
 
     std::shared_ptr<pp::person> someone_ptr = std::make_shared<pp::person>(someone);
-    std::cout << prettify("me ptr", someone_ptr.get());
+    std::cout << prettify("me ptr", someone_ptr.get()) << std::endl;
 
     std::vector<pp::person> people {
         someone,
         someone,
     };
-    std::cout << prettify("people", people);
+    std::cout << prettify("people", people) << std::endl;
 
     std::vector<int> nums{1, 2, 3, 4, 5};
-    std::cout << prettify("nums", nums);
+    std::cout << prettify("nums", nums) << std::endl;
 
     std::vector<std::vector<float>> mat{
         {1.2, 2.5, 3.4},
         {4.1, 5.3, 6.9},
         {7.8, 8.1, 9.7}
     };
-    std::cout << prettify("mat", mat);
+    std::cout << prettify("mat", mat) << std::endl;
 
     std::vector<std::vector<std::vector<float>>> tensor {
         mat,
         mat,
         mat,
     };
-    std::cout << prettify("tensor", tensor);
+    std::cout << prettify("tensor", tensor) << std::endl;
 
     package pack{"christmas", tensor, someone};
-    std::cout << prettify("pack", pack);
+    std::cout << prettify("pack", pack) << std::endl;
 
     return 0;
 }
