@@ -36,8 +36,8 @@ public:
     explicit prettifier(std::string indent, std::string attr_div)
             :indent_(std::move(indent)), attr_div_(std::move(attr_div)) { }
 
-    template<typename prettifiable>
-    prettifier& operator()(const std::string& name, const prettifiable& obj)
+    template<typename type>
+    prettifier& operator()(const std::string& name, const type& obj)
     {
         add_attr(name, obj);
         return *this;
