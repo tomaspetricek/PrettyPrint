@@ -75,11 +75,12 @@ int main()
     std::cout << "Pair:" << std::endl
               << prettify("couple", couple) << std::endl;
 
-//    std::map<std::string, pp::person> visited{
-//            {"New York",  someone},
-//            {"Vancouver", someone}
-//    };
-//    std::cout << "Map:" << std::endl
-//              << prettify("visited", visited) << std::endl;
+    std::map<std::string, pp::person> visited{
+            {"New York",  someone},
+            {"Vancouver", someone}
+    };
+    std::cout << "Map:" << std::endl
+              << prettify("visited", visited) << std::endl;
+
     return 0;
 }

@@ -23,6 +23,8 @@ utility
 -
 vector
 -
+map
+-
 prettifier.h
 /Users/tomaspetricek/Programming/Languages/Cpp/projects/PrettyPrint/prettifier.h
 name.h
@@ -50,6 +52,8 @@ sstream
 ostream
 -
 iostream
+-
+utility
 -
 utility
 -

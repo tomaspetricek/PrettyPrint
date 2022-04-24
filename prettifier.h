@@ -95,10 +95,10 @@ public:
         depth_++;
         buff_ << indent_*depth_;
 
-        for (auto el = it.begin(); el!=it.end(); ++el) {
+        for (auto el = it.begin(); el!=it.end();) {
             add_val(*el);
 
-            if (el+1!=it.end())
+            if (++el!=it.end())
                 buff_ << iter_sep_ << ' ';
         }
 
@@ -106,8 +106,8 @@ public:
         depth_--;
     }
 
-    template<typename T, typename U>
-    void add_val(const std::pair<T, U>& p) {
+
+    void add_val(const pairlike auto& p) {
         depth_++;
         add_attr("first", p.first);
         add_attr("second", p.second);
@@ -118,11 +118,11 @@ public:
     {
         buff_ << indent_*depth_;
 
-        for (auto el = it.begin(); el!=it.end(); ++el) {
+        for (auto el = it.begin(); el!=it.end();) {
             add_val(*el);
             buff_.seekp(-1, std::ios_base::end);
 
-            if (el+1!=it.end())
+            if (++el!=it.end())
                 buff_ << iter_sep_;
 
             buff_ << end_;

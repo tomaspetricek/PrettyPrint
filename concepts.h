@@ -27,6 +27,13 @@ concept iterable = (object<T> && requires(T it)
 });
 
 template<typename T>
+concept pairlike = (object<T> && requires(T pair)
+{
+    pair.first;
+    pair.second;
+});
+
+template<typename T>
 concept fundamental_iterable = iterable<T> && fundamental<typename T::value_type>;
 
 template<typename T>
