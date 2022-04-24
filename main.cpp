@@ -2,6 +2,7 @@
 #include <memory>
 #include <utility>
 #include <vector>
+#include <map>
 
 #include "prettifier.h"
 #include "name.h"
@@ -69,5 +70,16 @@ int main()
     package pack{"christmas", tensor, someone};
     std::cout << "Combined object:" << std::endl
               << prettify("pack", pack) << std::endl;
+
+    std::pair<pp::person, pp::person> couple = std::make_pair<>(someone, someone);
+    std::cout << "Pair:" << std::endl
+              << prettify("couple", couple) << std::endl;
+
+//    std::map<std::string, pp::person> visited{
+//            {"New York",  someone},
+//            {"Vancouver", someone}
+//    };
+//    std::cout << "Map:" << std::endl
+//              << prettify("visited", visited) << std::endl;
     return 0;
 }

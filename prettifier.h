@@ -10,6 +10,7 @@
 #include <ostream>
 #include <iostream>
 #include <utility>
+#include <utility>
 
 #include "concepts.h"
 
@@ -102,6 +103,14 @@ public:
         }
 
         buff_ << end_;
+        depth_--;
+    }
+
+    template<typename T, typename U>
+    void add_val(const std::pair<T, U>& p) {
+        depth_++;
+        add_attr("first", p.first);
+        add_attr("second", p.second);
         depth_--;
     }
 
