@@ -1,6 +1,6 @@
 FROM gcc:latest
 
-COPY ["main.cpp", "concepts.h", "name.h", "person.h", "prettifier.h", "color.hpp", "/usr/src/test/"]
+COPY ["main.cpp", "concepts.h", "name.h", "person.h", "prettifier.h", "/usr/src/test/"]
 
 WORKDIR /usr/src/test
 
